@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./style.css">
+  <title>HTML Accordion</title>
+</head>
+<body>
+
+  <div class="row">
+    <div class="dropdown">
+      <button class="dropbtn">Dropdown</button>
+      <div class="dropdown-content">
+          <a class="content" href="#first_accordion">Link 1</a>
+          <a class="content" href="#second_accordion">Link 2</a>
+          <a class="content" href="#third_accordion">Link 3</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">Dropdown2</button>
+      <div class="dropdown-content">
+        <a href="#first_accordion">Link 12</a>
+        <a href="#second_accordion">Link 22</a>
+        <a href="#third_accordion">Link 32</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="hover_dropdown">
+      <button class="hover_dropbtn">Dropdown</button>
+      <div class="hover_dropdown-content">
+          <a class="content" href="#first_accordion">Hover Link 1</a>
+          <a class="content" href="#second_accordion">Hover Link 2</a>
+          <a class="content" href="#third_accordion">Hover Link 3</a>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <button class="accordion first_accordion">flex-grow</button>
+    <div class="panel">
+      <p>Este es para agrandar el elemento con respecto al tamaño que sobra y al flex-grow del resto de los elementos, creo.</p>
+    </div>
+    
+    <button class="accordion second_accordion">flex-shrink</button>
+    <div class="panel">
+      <p>Mepa que lo mismo que grow, pero en vez de aumentar el tamaño lo disminuye</p>
+    </div>
+    
+    <button class="accordion third_accordion">flex-basis</button>
+    <div class="panel">
+      <p>Es el largo que se desea que tenga el elemento, puede que lo llegue a tener o no.</p>
+    </div>     
+  </div>
+
+<script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+  
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  }
+</script>
+
+<script>
+  var drop = document.getElementsByClassName("dropbtn");
+  var i;
+  
+  for (i = 0; i < drop.length; i++) {
+    drop[i].addEventListener("click", function() {
+      this.classList.toggle("dropped");
+      var dropMenu = this.nextElementSibling;
+    });
+  }
+</script>
+
+</body>
+</html>
