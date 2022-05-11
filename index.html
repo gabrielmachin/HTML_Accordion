@@ -4,43 +4,56 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./style1.css">
   <title>HTML Accordion</title>
 </head>
 <body>
 
-  <div class="row">
-    <div class="dropdown">
-      <button class="dropbtn">Dropdown</button>
-      <div class="dropdown-content">
-          <a class="content" href="#first_accordion">Link 1</a>
-          <a class="content" href="#second_accordion">Link 2</a>
-          <a class="content" href="#third_accordion">Link 3</a>
-      </div>
-    </div>
-
-    <div class="dropdown">
-      <button class="dropbtn">Dropdown2</button>
-      <div class="dropdown-content">
-        <a href="#first_accordion">Link 12</a>
-        <a href="#second_accordion">Link 22</a>
-        <a href="#third_accordion">Link 32</a>
-      </div>
+  <div class="sidebar">
+    <a class="current" href="#home">Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+    <button class="dropbtn">Dropdown</button>
+    <div class="dropdown-content">
+      <a class="content" href="#first_accordion">Link 1</a>
+      <a class="content" href="#second_accordion">Link 2</a>
+      <a class="content" href="#third_accordion">Link 3</a>
     </div>
   </div>
 
-  <div class="row">
-    <div class="hover_dropdown">
-      <button class="hover_dropbtn">Dropdown</button>
-      <div class="hover_dropdown-content">
-          <a class="content" href="#first_accordion">Hover Link 1</a>
-          <a class="content" href="#second_accordion">Hover Link 2</a>
-          <a class="content" href="#third_accordion">Hover Link 3</a>
+  <div class="content">
+    <div class="row">
+      <div class="dropdown">
+        <button class="dropbtn">Dropdown</button>
+        <div class="dropdown-content">
+            <a class="content" href="#first_accordion">Link 1</a>
+            <a class="content" href="#second_accordion">Link 2</a>
+            <a class="content" href="#third_accordion">Link 3</a>
+        </div>
+      </div>
+  
+      <div class="dropdown">
+        <button class="dropbtn">Dropdown2</button>
+        <div class="dropdown-content">
+          <a href="#first_accordion">Link 12</a>
+          <a href="#second_accordion">Link 22</a>
+          <a href="#third_accordion">Link 32</a>
+        </div>
       </div>
     </div>
-  </div>
-
-  <div>
+  
+    <div class="row">
+      <div class="hover_dropdown">
+        <button class="hover_dropbtn">Dropdown</button>
+        <div class="hover_dropdown-content">
+            <a class="content" href="#first_accordion">Hover Link 1</a>
+            <a class="content" href="#second_accordion">Hover Link 2</a>
+            <a class="content" href="#third_accordion">Hover Link 3</a>
+        </div>
+      </div>
+    </div>
+  
     <button class="accordion first_accordion">flex-grow</button>
     <div class="panel">
       <p>Este es para agrandar el elemento con respecto al tamaño que sobra y al flex-grow del resto de los elementos, creo.</p>
